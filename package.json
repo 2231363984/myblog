@@ -6,12 +6,13 @@
     "antd": "^3.24.2",
     "babel-plugin-import": "^1.12.2",
     "customize-cra": "^0.8.0",
+    "less-loader": "^5.0.0",
     "react": "^16.10.2",
     "react-app-rewired": "^2.1.4",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
-   "scripts": {
+  "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test"
@@ -19,7 +20,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage":"./",
+  "homepage": "./",
   "browserslist": {
     "production": [
       ">0.2%",
