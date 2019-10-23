@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import { Spin } from 'antd';
+import { Icon } from 'antd';
 import './css/common.css'
 
 export default class Loading extends Component {
@@ -33,7 +33,7 @@ export default class Loading extends Component {
                 <div className={'my-loading-warp'}>
                     <div className={'my-loading-mask'}></div>
                     <div className={'my-loading-spin'}>
-                        <Spin size="large" tip={"loading..."} />
+                        <Icon type="loading" />
                     </div>
                 </div>
             </React.Fragment>

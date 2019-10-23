@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, Icon, Row, Col, Input } from 'antd';
-import { siteNav} from '../../config/siteConfig.jsx';
+import { siteNav} from '../../Config/siteConfig.jsx';
 import './home.css';
 
 const { Header, Content, Footer } = Layout;
@@ -54,7 +54,7 @@ export default class Home extends React.Component {
                   mode="horizontal"
                   style={{ lineHeight: '63px', borderBottom: "0px" }}
                 >
-                  {this.renderMenu(siteNav);}
+                  {this.renderMenu(siteNav)}
                 </Menu>
               </Col>
               <Col>
