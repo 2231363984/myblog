@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Loading from '../common/Loading.jsx';
 import {siteRouter} from '../Config/siteConfig.jsx';
-import Home from '../Components/Home/home.jsx';
+import Home from '../components/Home/home.jsx';
 
 class RouterComment extends React.Component {
     constructor(props) {

@@ -1,5 +1,5 @@
-import ViewDetail from "../Components/ViewDetail/viewDetail";
-import Home from "../Components/Home/home";
+import ViewDetail from "../components/ViewDetail/viewDetail";
+import Home from "../components/Home/home";
 
 
 export const  siteRouter=[
