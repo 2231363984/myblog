@@ -18,3 +18,33 @@ export const  siteRouter=[
         permission: ['Administrator']
     },
 ]
+export const siteNav=[
+    {
+        displayName: `WEB前端`,
+        type: 'profile',
+        key: 'WEB前端',
+        permission: [],
+        children: [
+            {
+                displayName: 'React',
+                key: 'React',
+                route: '/category/',
+                permission: [],
+            },
+            {
+                displayName: 'Vue',
+                key: 'Vue',
+                route: '/category/',
+                permission: [],
+            },
+        ]
+    },
+    {
+        displayName: `首页`,
+        type: 'profile',
+        key: '首页',
+        route: '/home',
+        permission: [],
+
+    },
+]

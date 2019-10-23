@@ -1,9 +1,10 @@
 import React from 'react';
-import { Layout, Menu, Row, Col ,Input} from 'antd';
+import { Layout, Menu, Icon, Row, Col, Input } from 'antd';
 import './home.css';
 
 const { Header, Content, Footer } = Layout;
-const {Search} =Input;
+const { Search } = Input;
+const { SubMenu } = Menu;
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +12,33 @@ export default class Home extends React.Component {
     }
 
   }
+
+  renderMenu = (data) => {
+    return data.map((item) => {
+      if (item.children) {
+        return (
+          <SubMenu
+            key={item.key}
+            title={<span>
+              {item.type ? <Icon type={item.type} /> : null}
+              <span>{item.displayName}</span>
+            </span>}
+            onTitleClick={this.onTitleClick}>
+            {this.renderMenu(item.children)}
+          </SubMenu>
+        )
+      }
+      return (<Menu.Item key={item.key} title={item.displayName} onClick={() => this.menuItemClick(item.route)}>
+        {item.type ? <Icon type={item.type} /> : null}
+        <span>{item.displayName}</span>
+      </Menu.Item>)
+    }
+    )
+  }
+  menuItemClick = (path) => {
+    this.props.history.push(path);
+  }
+
   render() {
     return (
       <React.Fragment>
