@@ -1,0 +1,27 @@
+.logo{
+    width:200px;
+    height: 64px;
+    background: skyblue;
+}
+.my-header{
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    padding: 0px;
+}
+.my-header-flex{
+    width:1200px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.my-content{
+    width:1200px;
+    margin:20px auto;
+   
+}
+
+.my-left-content{
+    background: #fff;
+    min-height: 800px;
+}
