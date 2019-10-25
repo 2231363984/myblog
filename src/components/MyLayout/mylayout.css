@@ -2,6 +2,8 @@
     width:200px;
     height: 64px;
     background: skyblue;
+    line-height: 64px;
+    text-align: center;
 }
 .my-header{
     background: #fff;
@@ -24,4 +26,20 @@
 .my-left-content{
     background: #fff;
     min-height: 800px;
+}
+.my-right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my-announcement{
+    background: #fff;
+}
+.my-new-comment{
+    background: #fff;
+    margin-top:20px;
+}
+.my-gutter{
+    margin-left:0!important;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Layout, Menu, Icon, Col, Input, Row } from 'antd';
+import { Layout, Menu, Icon, Col, Input, Row, Card, List, Avatar, Button } from 'antd';
 import { siteNav } from '../../Config/siteConfig.jsx';
 import { withRouter } from 'react-router-dom';
+import { announcement, newComment } from '../../Config/requestMock';
 import './mylayout.css';
 
 const { Header, Content, Footer } = Layout;
@@ -11,6 +12,7 @@ class MyLayout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            data: [],
         }
 
     }
@@ -48,7 +50,7 @@ class MyLayout extends React.Component {
                     <Header className="my-header">
                         <Col className="my-header-flex">
                             <Col>
-                                <div className="logo" />
+                                <div className="logo" >JTM</div>
                             </Col>
                             <Col offset={3}>
                                 <Menu
@@ -70,24 +72,51 @@ class MyLayout extends React.Component {
                     </Header>
                     <Content className="my-content">
                         <Col className={'in-my-content'} >
-                            <Row gutter={[16, 0]}>
+                            <Row gutter={[16, 0]} className="my-gutter"> 
                                 <Col span={18} className={'my-left-content'}>
                                     <Col>
                                         {this.props.children}
                                     </Col>
                                 </Col>
                                 <Col span={6} className={'my-right-content'}>
-                                    123
-                    </Col>
-
+                                    <Row className="my-announcement">
+                                        <Col span={24}>
+                                            <Card title="公告" size="small" bordered={false} style={{ width: "100%" }}>
+                                                <p>{announcement.result.description}</p>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                    <Row className="my-new-comment">
+                                        <Col span={24}>
+                                            <Card title="最新评论" size="small" bordered={false} style={{ width: "100%" }}>
+                                                <List
+                                                    itemLayout="horizontal"
+                                                    dataSource={newComment.result.data}
+                                                    renderItem={item => (
+                                                        <List.Item>
+                                                            <List.Item.Meta
+                                                                avatar={<Avatar style={{ color: '#fff', backgroundColor: item.avatar }}>{item.UserName[0]}</Avatar>}
+                                                                title={<span>{item.UserName}</span>}
+                                                                description={
+                                                                    <div>
+                                                                        <p>{item.Comment}</p>
+                                                                        <p>主题: <Button type="link" style={{ padding: 0 }} onClick={() => { this.props.history.push(item.CommentUrl) }}>{item.CommentTitle}</Button></p>
+                                                                    </div>
+                                                                }
+                                                            />
+                                                        </List.Item>
+                                                    )}
+                                                />
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Col>
                             </Row>
-
-
                         </Col>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                    <Footer style={{ textAlign: 'center' }}>Authour is Created by JTM</Footer>
                 </Layout>
-            </React.Fragment>
+            </React.Fragment >
         );
     }
 }

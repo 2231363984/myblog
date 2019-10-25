@@ -1,0 +1,17 @@
+.my-list-iconarray{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.my-list-icon{
+    margin-right:5px;
+}
+.image-scale{
+    transform:scale(1.1,1.1);
+}
+.my-image{
+    transition: 0.5s;
+}
+.my-list-tag{
+    margin-bottom:12px;
+}
