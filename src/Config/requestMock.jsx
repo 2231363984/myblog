@@ -81,3 +81,19 @@ export const homeList={
     state:0,
     message:null
 }
+export const detailHtml=`
+<h2>Hello.</h2>
+<ul>
+<li>This is markdown.</li>
+<li>It is fun</li>
+</ul>
+<ol>
+<li><s>aaaaa</s></li>
+</ol>
+<p>isgood</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> a =c
+<span class="hljs-keyword">let</span> a =c
+<span class="hljs-keyword">let</span> a =c
+<span class="hljs-keyword">let</span> a =c
+</code></pre>
+`
