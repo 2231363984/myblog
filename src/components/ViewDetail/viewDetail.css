@@ -1,0 +1,17 @@
+.my-viewdetail-title{
+    display: inline-block;
+    margin-left: 10px;
+}
+.my-detail-row-title{
+    text-align: center;
+}
+.my-viewmodal-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-viewmodal-operation{
+    margin:10px;
+}
